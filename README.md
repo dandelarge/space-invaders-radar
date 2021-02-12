@@ -1,6 +1,37 @@
-# Getting Started with Create React App
+# Space Invaders Radar
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## The algorithm
+The strategy is brute-force. The search is done in stages.
+
+- **Turn the input from a string to a 2D array.** in order to treat the input as pixels in a sceren we need to have some sort of convention. The inputs and samples will be two-dimentional arrays so I can take advantage of the built-it functions of the language.
+
+- **Take samples the size of the invader from the input.** From the mapped input, We take samples the size of the invader.
+The number of samples taken is `(W -iW) * (H - iH)` where:
+    - `W` is te Width of the Input,
+    - `iW` is the width of the invader
+    - `H` is the height of the input
+    - `iH` is the height of the invader
+
+    This is not optimal. but it's the first approach. If I have time I'll think of a better way of finding the Invaders.
+
+- **Abstract the Invader image information.** I created an `Invader` class that is responsible for holding and procesing the invader information. Two things we want two know from the shape of the invader are:
+    1. what are the coordinates for all the 'o's
+    2. what are the coordinates for all the '-'s
+
+    the `Invader` class stores these in two lists. `Invader.positivesList` and `Invader.negativesList`. we can use these as 'checklists' against the samples from the input.
+
+- **Compare the samples against the invader's checklists.** We already have a list of samples and a list of coordinates with the invader's shape. So now, instead of traversing another two-dimentional array, we can traverse the checklists and compare the value of the pixel in the coordinates that are stored in the checklists.
+
+- **calculate the match ratio of the sample.** The result of comparing the values of the checklists against the sample is a the match ratio. a decimal number that is always less or equal to one. This number is calculated by dividing the amount of matches by the amount of squares in the samples.
+
+- **discriminate samples with poor match ratio.** Using that Match ratio, we can discriminate the objects in the radar and leave only the more likely to be an Invader.
+
+
+## Helper functions
+I have created a `PrintInvader` class with three static methods that help visualize what the algrithm "sees".
+- `PrintInvader.fromPositives(positives: number[][])` constructs an image based only in the object matches and sets the rest of pixels to '-'
+- `PrintInvader.fromLists(positives: number[][], negatives[][])` builds an image using the matches of both objects and spaces, the missmatches are represented as empty spaces.
+- `PrintInvader.fromMap(map: string[][])` takes a two-dimentional array and turns it into a string.
 
 ## Available Scripts
 
@@ -28,19 +59,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
