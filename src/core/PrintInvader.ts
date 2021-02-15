@@ -1,9 +1,12 @@
+import { Invader } from "./invaders/Invader";
 export class PrintInvader {
-  static fromPositives(positives: number[][], width: number, height: number): string {
+  static fromPositives(positives: number[][], invader: Invader): string {
+    console.log(positives);
     let pIndex = 0;
     let str: string = "";
-    for (let i = 0; i < height; i++) {
-      for (let r = 0; r < width; r++) {
+    for (let i = 0; i < invader.height; i++) {
+      console.log(str);
+      for (let r = 0; r < invader.width; r++) {
         if (
           positives[pIndex] &&
           positives[pIndex][0] === i &&
@@ -17,21 +20,15 @@ export class PrintInvader {
       }
       str += `\n`;
     }
-    console.log(str);
     return str;
   }
 
-  static fromLists(
-    positives: number[][],
-    negatives: number[][],
-    width: number,
-    height: number
-  ): string {
+  static fromLists(positives: number[][], negatives: number[][], invader: Invader): string {
     let pIndex = 0;
     let nIndex = 0;
     let str: string = "";
-    for (let i = 0; i < height; i++) {
-      for (let r = 0; r < width; r++) {
+    for (let i = 0; i < invader.height; i++) {
+      for (let r = 0; r < invader.width; r++) {
         if (
           positives[pIndex] &&
           positives[pIndex][0] === i &&
@@ -52,7 +49,6 @@ export class PrintInvader {
       }
       str += `\n`;
     }
-    console.log(str);
     return str;
   }
 
@@ -61,7 +57,6 @@ export class PrintInvader {
     for (let i = 0; i < map.length; i++) {
       str += map[i].join("") + `\n`;
     }
-    console.log(str);
     return str;
   }
 }

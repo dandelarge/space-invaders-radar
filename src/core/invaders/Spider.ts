@@ -12,6 +12,6 @@ o-o-----o-o
 
 export class Spider extends Invader {
     constructor() {
-        super(spiderImage);
+        super('spider', spiderImage);
     }
 }

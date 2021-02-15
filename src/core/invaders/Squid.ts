@@ -12,6 +12,6 @@ o-o--o-o`;
 
 export class Squid extends Invader {
     constructor() {
-        super(squidImage);
+        super('squid', squidImage);
     }
 }
