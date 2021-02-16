@@ -23,7 +23,7 @@ const mockResult: RadarResults = {
 const mockState: RadarState = {
     input:'',
     samples: [mockSample],
-    results: [mockResult],
+    results: [mockResult, mockResult],
     definition: 0,
     invaders:[]
 };
@@ -31,4 +31,8 @@ const mockState: RadarState = {
 test('renders the component', () => {
   const component = shallow(<Results state={mockState} />);
   expect(component).toMatchSnapshot();
+});
+
+test('should update the index on next button', () => {
+    const component = shallow(<Results state={mockState} />);
 });

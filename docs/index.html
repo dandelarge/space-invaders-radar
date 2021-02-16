@@ -113,10 +113,19 @@
 <span style="color: #000000">        |</span>
 <span style="color: #000000">        |-</span><span style="color: #001080">reducers</span><span style="color: #000000">/</span>
 <span style="color: #000000">            |-</span><span style="color: #001080">radar</span><span style="color: #000000">-</span><span style="color: #001080">reducer</span><span style="color: #000000">.</span><span style="color: #001080">ts</span>
-
-
-
 </code></pre>
+				<p>The state of the app is contained using react Context, this way I could use the dispatch function in the app children as well as passing the state trhough props to children deep inside the tree. At the end it proved not to be That necesary since the dept of the tree is not that big.</p>
+				<p>The Radar reducer has only three available actions:
+				<code>UPDATE_INPUT</code>, <code>PROCESS_INPUT</code> and <code>UPDATE_STATE</code>. The last one should not really exist and enything can be done with the other two. It also feels like an anti pattern but I can&#39;t tell if it is. I&#39;d remove it if I was not so long into the tinme of the assignment already.</p>
+				<p>All components are functional components. I handle the render lifecycle hook from react using <code>useEffect</code> hook.</p>
+				<a href="#static-classes" id="static-classes" style="color: inherit; text-decoration: none;">
+					<h3>Static Classes</h3>
+				</a>
+				<p>I created two static classes that work as &quot;services&quot;. I thought of using composition here, but it&#39;s not really necesary for what the application is. These classes <code>Radar</code> and <code>PrintRadar</code> work as a facade for the logic behind the componens.</p>
+				<a href="#invaders-class" id="invaders-class" style="color: inherit; text-decoration: none;">
+					<h3>Invaders class</h3>
+				</a>
+				<p><code>Invader</code> class works as a model for our invaders. All relevant calculations and information is saved in an instance of <code>Invader</code>.</p>
 				<a href="#the-algorithm" id="the-algorithm" style="color: inherit; text-decoration: none;">
 					<h2>The algorithm</h2>
 				</a>
@@ -169,18 +178,15 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class=" ">
-						<a href="modules.html">Exports</a>
+						<a href="modules.html">Modules</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/core.html">core</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-variable">
-						<a href="modules.html#radardispatch" class="tsd-kind-icon">Radar<wbr>Dispatch</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="modules.html#default" class="tsd-kind-icon">default</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
@@ -190,6 +196,15 @@
 	<div class="container">
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
 		</div>
 	</div>
 </footer>

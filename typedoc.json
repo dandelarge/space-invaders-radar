@@ -1,0 +1,6 @@
+{
+    "entryPoints": [
+        "./src/components/index.tsx",
+        "./src/core/index.tsx"
+    ]
+}

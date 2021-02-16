@@ -17,6 +17,7 @@ function Results(props: { state: RadarState }) {
   useEffect(() => {
     setIndex(0);
   }, [state.results]);
+
   return (
     <React.Fragment>
       <div>
