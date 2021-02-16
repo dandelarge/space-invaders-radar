@@ -1,6 +1,3 @@
-import { PrintInvader } from "../PrintInvader";
-import { RadarResults } from "../radar.types";
-
 export class Invader {
   name: string;
   width: number;

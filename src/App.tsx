@@ -11,7 +11,7 @@ import Results from './components/results/results';
 const spider = new Spider();
 const squid = new Squid();
 
-const RadarDispatch = React.createContext({});
+export const RadarDispatch = React.createContext({});
 
 const initialState: RadarState = {
   input: globals.DEFAULT_READING,
@@ -29,7 +29,7 @@ function radarInit(state: RadarState) {
 function App() {
   const [state, dispatch] = useReducer(radarReducer, initialState, radarInit);
   useEffect(() => {
-    Radar.processInput(state);
+    dispatch({type: 'PROCESS_INPUT', newState: state});
   }, [])
 
   function onProcessButtonClick() {
@@ -49,7 +49,6 @@ function App() {
     <div className="App">
       <RadarDispatch.Provider value={dispatch}>
         <section className="input-panel">
-          <div></div>
           <span>match ratio</span>
           <input type="number" max="1" placeholder="0.8" value={state.definition}
             onChange={event => dispatch({type: 'UPDATE_STATE', newState: {...state, definition: parseFloat(event.target.value)}})}/>

@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component 1`] = `
+<Fragment>
+  <div>
+    <div
+      className="radarScreen"
+    >
+      <p
+        className="textarea larger-text"
+      >
+        invaders found: 
+        1
+      </p>
+    </div>
+    <h4>
+      current invader 
+    </h4>
+    <div>
+      <button
+        onClick={[Function]}
+      >
+        previous
+      </button>
+      <span>
+        1
+         of 
+        1
+      </span>
+      <button
+        onClick={[Function]}
+      >
+        next
+      </button>
+    </div>
+  </div>
+  <div
+    className="radarScreen"
+  >
+    <p>
+      Invader image from the radar in positition:
+       
+      0
+       ,
+       
+      0
+    </p>
+    <pre
+      className="textarea"
+    />
+  </div>
+  <div
+    className="radarScreen"
+  >
+    <p>
+      Invader image taking in account only possitive matches
+    </p>
+    <pre
+      className="textarea"
+    >
+      
+
+    </pre>
+  </div>
+  <div
+    className="radarScreen"
+  >
+    <p>
+      Invader image removing only the noise
+    </p>
+    <pre
+      className="textarea"
+    >
+      
+
+    </pre>
+  </div>
+</Fragment>
+`;
