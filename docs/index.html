@@ -1,0 +1,202 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>space-invaders-radar</title>
+	<meta name="description" content="Documentation for space-invaders-radar">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">space-invaders-radar</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>space-invaders-radar</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#space-invaders-radar" id="space-invaders-radar" style="color: inherit; text-decoration: none;">
+					<h1>Space Invaders Radar</h1>
+				</a>
+				<a href="#available-scripts" id="available-scripts" style="color: inherit; text-decoration: none;">
+					<h2>Available Scripts</h2>
+				</a>
+				<p>In the project directory, you can run:</p>
+				<a href="#npm-start" id="npm-start" style="color: inherit; text-decoration: none;">
+					<h3><code>npm start</code></h3>
+				</a>
+				<p>Runs the app in the development mode.<br>Open <a href="http://localhost:3000">http://localhost:3000</a> to view it in the browser.</p>
+				<p>The page will reload if you make edits.<br>You will also see any lint errors in the console.</p>
+				<a href="#npm-test" id="npm-test" style="color: inherit; text-decoration: none;">
+					<h3><code>npm test</code></h3>
+				</a>
+				<p>Launches the test runner in the interactive watch mode.</p>
+				<a href="#npm-run-testcoverage" id="npm-run-testcoverage" style="color: inherit; text-decoration: none;">
+					<h3><code>npm run test:coverage</code></h3>
+				</a>
+				<p>runs tests and makes a coverage report.</p>
+				<a href="#npm-run-build" id="npm-run-build" style="color: inherit; text-decoration: none;">
+					<h3><code>npm run build</code></h3>
+				</a>
+				<p>Builds the app for production to the <code>build</code> folder.<br>It correctly bundles React in production mode and optimizes the build for the best performance.</p>
+				<p>The build is minified and the filenames include the hashes.</p>
+				<a href="#the-app" id="the-app" style="color: inherit; text-decoration: none;">
+					<h2>The App</h2>
+				</a>
+				<p>the app is built using create-react-app with typescript. You can run it using <code>npm start</code> command.</p>
+				<a href="#docker-container" id="docker-container" style="color: inherit; text-decoration: none;">
+					<h3>docker container</h3>
+				</a>
+				<p>I have created a &quot;production-ready&quot; docker container that runs an nginx server mapped to port 3001. You can test it by running <code>docker-compose up</code></p>
+				<a href="#the-components" id="the-components" style="color: inherit; text-decoration: none;">
+					<h3>The components</h3>
+				</a>
+				<p>The folder structure is as follows:</p>
+				<pre><code><span style="color: #000000">|-</span><span style="color: #001080">src</span><span style="color: #000000">/</span>
+<span style="color: #000000">    |-</span><span style="color: #001080">App</span><span style="color: #000000">.</span><span style="color: #001080">tsx</span>
+<span style="color: #000000">    |-</span><span style="color: #001080">components</span><span style="color: #000000">/</span>
+<span style="color: #000000">    |   |-</span><span style="color: #001080">Results</span><span style="color: #000000">.</span><span style="color: #001080">tsx</span>
+<span style="color: #000000">    |</span>
+<span style="color: #000000">    |-</span><span style="color: #001080">config</span><span style="color: #000000">/</span>
+<span style="color: #000000">    |   |-</span><span style="color: #001080">constants</span><span style="color: #000000">.</span><span style="color: #001080">ts</span>
+<span style="color: #000000">    |</span>
+<span style="color: #000000">    |-</span><span style="color: #001080">core</span><span style="color: #000000">/</span>
+<span style="color: #000000">        |-</span><span style="color: #001080">Radar</span><span style="color: #000000">.</span><span style="color: #001080">ts</span>
+<span style="color: #000000">        |-</span><span style="color: #001080">PrintInvader</span><span style="color: #000000">.</span><span style="color: #001080">ts</span>
+<span style="color: #000000">        |-</span><span style="color: #001080">invaders</span><span style="color: #000000">/</span>
+<span style="color: #000000">        |   |-</span><span style="color: #001080">Invader</span><span style="color: #000000">.</span><span style="color: #001080">ts</span>
+<span style="color: #000000">        |   |-</span><span style="color: #001080">Spider</span><span style="color: #000000">.</span><span style="color: #001080">ts</span>
+<span style="color: #000000">        |   |-</span><span style="color: #001080">Squid</span><span style="color: #000000">.</span><span style="color: #001080">ts</span>
+<span style="color: #000000">        |</span>
+<span style="color: #000000">        |-</span><span style="color: #001080">reducers</span><span style="color: #000000">/</span>
+<span style="color: #000000">            |-</span><span style="color: #001080">radar</span><span style="color: #000000">-</span><span style="color: #001080">reducer</span><span style="color: #000000">.</span><span style="color: #001080">ts</span>
+
+
+
+</code></pre>
+				<a href="#the-algorithm" id="the-algorithm" style="color: inherit; text-decoration: none;">
+					<h2>The algorithm</h2>
+				</a>
+				<p>The strategy is brute-force. The search is done in stages.</p>
+				<ul>
+					<li><p><strong>Turn the input from a string to a 2D array.</strong> in order to treat the input as pixels in a sceren we need to have some sort of convention. The inputs and samples will be two-dimentional arrays so I can take advantage of the built-it functions of the language.</p>
+					</li>
+					<li><p><strong>Take samples the size of the invader from the input.</strong> From the mapped input, We take samples the size of the invader.
+						The number of samples taken is <code>(W -iW) * (H - iH)</code> where:</p>
+						<ul>
+							<li><p><code>W</code> is te Width of the Input,</p>
+							</li>
+							<li><p><code>iW</code> is the width of the invader</p>
+							</li>
+							<li><p><code>H</code> is the height of the input</p>
+							</li>
+							<li><p><code>iH</code> is the height of the invader</p>
+								<p>This is not optimal. but it&#39;s the first approach. If I have time I&#39;ll think of a better way of finding the Invaders.</p>
+							</li>
+						</ul>
+					</li>
+					<li><p><strong>Abstract the Invader image information.</strong> I created an <code>Invader</code> class that is responsible for holding and procesing the invader information. Two things we want two know from the shape of the invader are:</p>
+						<ol>
+							<li><p>what are the coordinates for all the &#39;o&#39;s</p>
+							</li>
+							<li><p>what are the coordinates for all the &#39;-&#39;s</p>
+								<p>the <code>Invader</code> class stores these in two lists. <code>Invader.positivesList</code> and <code>Invader.negativesList</code>. we can use these as &#39;checklists&#39; against the samples from the input.</p>
+							</li>
+						</ol>
+					</li>
+					<li><p><strong>Compare the samples against the invader&#39;s checklists.</strong> We already have a list of samples and a list of coordinates with the invader&#39;s shape. So now, instead of traversing another two-dimentional array, we can traverse the checklists and compare the value of the pixel in the coordinates that are stored in the checklists.</p>
+					</li>
+					<li><p><strong>calculate the match ratio of the sample.</strong> The result of comparing the values of the checklists against the sample is a the match ratio. a decimal number that is always less or equal to one. This number is calculated by dividing the amount of matches by the amount of squares in the samples.</p>
+					</li>
+					<li><p><strong>discriminate samples with poor match ratio.</strong> Using that Match ratio, we can discriminate the objects in the radar and leave only the more likely to be an Invader.</p>
+					</li>
+				</ul>
+				<a href="#helper-functions" id="helper-functions" style="color: inherit; text-decoration: none;">
+					<h2>Helper functions</h2>
+				</a>
+				<p>I have created a <code>PrintInvader</code> class with three static methods that help visualize what the algrithm &quot;sees&quot;.</p>
+				<ul>
+					<li><code>PrintInvader.fromPositives(positives: number[][])</code> constructs an image based only in the object matches and sets the rest of pixels to &#39;-&#39;</li>
+					<li><code>PrintInvader.fromLists(positives: number[][], negatives[][])</code> builds an image using the matches of both objects and spaces, the missmatches are represented as empty spaces.</li>
+					<li><code>PrintInvader.fromMap(map: string[][])</code> takes a two-dimentional array and turns it into a string.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#radardispatch" class="tsd-kind-icon">Radar<wbr>Dispatch</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#default" class="tsd-kind-icon">default</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

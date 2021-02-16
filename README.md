@@ -28,7 +28,47 @@ The build is minified and the filenames include the hashes.
 
 ## The App
 
-the app is built using create-react-app with typescript. the
+the app is built using create-react-app with typescript. You can run it using `npm start` command.
+
+### docker container
+I have created a "production-ready" docker container that runs an nginx server mapped to port 3001. You can test it by running `docker-compose up`
+
+### The components
+The folder structure is as follows:
+```
+|-src/
+    |-App.tsx
+    |-components/
+    |   |-Results.tsx
+    |
+    |-config/
+    |   |-constants.ts
+    |
+    |-core/
+        |-Radar.ts
+        |-PrintInvader.ts
+        |-invaders/
+        |   |-Invader.ts
+        |   |-Spider.ts
+        |   |-Squid.ts
+        |
+        |-reducers/
+            |-radar-reducer.ts
+```
+
+The state of the app is contained using react Context, this way I could use the dispatch function in the app children as well as passing the state trhough props to children deep inside the tree. At the end it proved not to be That necesary since the dept of the tree is not that big.
+
+The Radar reducer has only three available actions:
+`UPDATE_INPUT`, `PROCESS_INPUT` and `UPDATE_STATE`. The last one should not really exist and enything can be done with the other two. It also feels like an anti pattern but I can't tell if it is. I'd remove it if I was not so long into the tinme of the assignment already.
+
+All components are functional components. I handle the render lifecycle hook from react using `useEffect` hook.
+
+### Static Classes
+I created two static classes that work as "services". I thought of using composition here, but it's not really necesary for what the application is. These classes `Radar` and `PrintRadar` work as a facade for the logic behind the componens.
+
+### Invaders class
+`Invader` class works as a model for our invaders. All relevant calculations and information is saved in an instance of `Invader`.
+
 ## The algorithm
 The strategy is brute-force. The search is done in stages.
 
