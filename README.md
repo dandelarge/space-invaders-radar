@@ -1,5 +1,34 @@
 # Space Invaders Radar
 
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.
+
+### `npm run test:coverage`
+
+runs tests and makes a coverage report.
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.
+
+## The App
+
+the app is built using create-react-app with typescript. the
 ## The algorithm
 The strategy is brute-force. The search is done in stages.
 
@@ -33,29 +62,3 @@ I have created a `PrintInvader` class with three static methods that help visual
 - `PrintInvader.fromLists(positives: number[][], negatives[][])` builds an image using the matches of both objects and spaces, the missmatches are represented as empty spaces.
 - `PrintInvader.fromMap(map: string[][])` takes a two-dimentional array and turns it into a string.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
